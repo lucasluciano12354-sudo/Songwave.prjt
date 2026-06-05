@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,13 +6,14 @@
   font-family: "Roboto", sans-serif;
 }
 
-body{
+body {
   display: flex;
+  flex-direction: column;
   background-color: rgb(0, 0, 0);
 }
 
- /*Barra de Navegação*/
-.navbar{
+/*Barra de Navegação*/
+.navbar {
   width: 100%;
   height: 75px;
   background-color: #201f20;
@@ -20,83 +21,80 @@ body{
   align-items: center;
   padding: 30px;
   position: fixed;
+  z-index: 10;
   left: 190px;
   border-bottom: 1px solid #6e4588;
-  z-index: 999;
 }
 
- /*Barra de Pesquisa*/
-.search{
-  display:flex;
+/*Barra de Pesquisa*/
+.search {
+  display: flex;
   gap: 10px;
   position: absolute;
   right: -150px;
   left: 50%;
   transform: translateX(-50%);
   padding-top: 0.2rem;
-  
-  
-  
 }
 
-.search input{
-     width: 350px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 30px 0 0 30px;
-    background-color: #242424;
-    color: white;
-    font-size: 13px;
-    outline: none;
-    
-    
+.search input {
+  width: 350px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px 0 0 30px;
+  background-color: #242424;
+  color: white;
+  font-size: 13px;
+  outline: none;
 }
 
-
-.search input:focus{
-    border-color: #d900ff;
-    box-shadow: 0 0 8px rgba(131, 49, 194, 0.5);
+.search input:focus {
+  border-color: #d900ff;
+  box-shadow: 0 0 8px rgba(131, 49, 194, 0.5);
 }
 
 /*Botão de Pesquisa*/
-.search button{
- padding: 0.8px 15px;
-    border: none;
-    border-radius: 10px;
-    background: #242424;
-    color: white;
-    font-size: 12px;
-    cursor: pointer;
-    transition: 0.3s;
-    height: 50px;
+.search button {
+  padding: 0.8px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #242424;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 50px;
 }
 
 .search button:hover{
-    font-size: 2rem;
+    background-color: #a855f7;
+    box-shadow: 0 0 25px #a855f7;
+    transform: scale(1.05);
 }
 
 /*Barra de Navegação(Lateral)*/
-.sidebar{
+.sidebar {
   bottom: 0;
   width: 190px;
   height: 100vh;
-  background-color: #2b292b66;
-  padding-top: 20px;
+  background-color: #131313;
+  padding-top: 90px;
   position: fixed;
-  
+  z-index: 10;
 }
 
-.sidebar img{
+.logo {
   color: rgb(255, 255, 255);
   text-align: center;
-  position: relative;
-  left: 18px;
-  top: -0.6rem;
-  width: 60px;
-  height: 60px;
+  position: fixed;
+  left: -5px;
+  top: -0.4rem;
+  width: 120px;
+  filter: drop-shadow(0 0 10px purple);
+  margin-top: 1px;
 }
 
-.sidebar a{
+.sidebar a {
   display: block;
   color: #ffffff78;
   text-decoration: none;
@@ -104,36 +102,478 @@ body{
   transition: 0.3s;
 }
 
-.sidebar a:hover{
-    color:#6e4588;
+.sidebar a:hover {
+  color: #6e4588;
   border-bottom: 0.1rem solid color(srgb red green blue);
   padding-bottom: 0.5;
   font-size: 1.1rem;
-   
 }
 
-.login-btn{
-   padding: 12px 25px;
+/*Botão Login*/
+.login-btn {
+  text-decoration: none;
+  padding: 12px 25px;
   border: none;
   border-radius: 30px;
-  background:#6e4588;
+  background: #6e4588;
   color: white;
   font-size: 15px;
-  font-weight:lighter;
+  font-weight: lighter;
   cursor: pointer;
   transition: 0.3s;
-  position: absolute;
+  position: fixed;
   right: 20px;
   margin-top: 17px;
-  z-index: 999;
+  z-index: 100;
 }
 
-.login-btn:hover{
+.login-btn:hover {
   background: #9159a996;
-  transform: scale(1.05)
+  transform: scale(1.05);
 }
 
-.content{
+/*Barra inferior (Play) precisa ser arrumada*/ 
+.player-bar {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #121212;
+  border-top: 1px solid #2a2a2a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.music-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.music-info img {
+  width: 55px;
+  height: 55px;
+  border-radius: 8px;
+}
+
+.music-info h4 {
+  color: white;
+  margin: 0;
+}
+
+.music-info p {
+  color: #b3b3b3;
+  margin: 0;
+  font-size: 14px;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.player-controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.play-main {
+  width: 45px;
+  height: 45px;
+  border-radius: 10%;
+  background: #a855f7 !important;
+}
+
+.volume img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 28px;
+  right: 145px;
+}
+
+/*Volume (Arrumar)*/
+input[type="range"] {
+  -webkitappearance: none;
+
+  width: 120px;
+  height: 4px;
+  background: #535353;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px;
+  background: #535353;
+  border-radius: 10px;
+}
+
+/* Bolinha */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  margin-top: -4px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  opacity: 1;
+}
+
+input[type="range"]:hover::-webkit-slider-runnable-track {
+  background: #08f757;
+}
+
+/*Banner principal*/
+.banner{
+    width: 1300px;
+    height: 600px;
+    background-image:
+    linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.2)),
+    url(./img/donga_rep_portal-vermelho-min.jfif);
+    background-size: cover;
+    background-position: 80% -14%;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin-left: 203px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  margin-top: 500px;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      #0f0f0f
+  );
+
+}
+
+/*Escrita (Banner)*/
+.overlay{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: -20px;
+}
+
+.info{
+    max-width: 500px;
+    color: white;
+    margin-left: -20px;
+    margin-top: 50px;
+}
+
+.tag{
+    background: rgba(255,255,255,0.1);
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.info h1{
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+}
+
+.info p{
+    color: #cfcfcf;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/*Botões Banner*/
+.buttons{
+    display: flex;
+    gap: 15px;
+}
+
+.play-btn{
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.play-btn:hover{
+    background-color: #a855f7;
+    box-shadow: 0 0 25px #a855f7;
+    transform: scale(1.05);
+}
+
+
+.info-btn{
+  text-decoration: none;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.info-btn:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(187, 66, 248, 0.599);
+}
+
+
+
+/*Catalogo 1 pagode*/
+
+.catalogo{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 180px;
+  margin-left: 188px;
+}
+
+.catalogo h1{
+  color: rgba(255, 255, 255, 0.863);
+  position: absolute;
+  margin-left: -50px;
+  margin-top: -120px;
+  padding: 12px 25px;
+  background:#0000006f;
+  border-radius: 30px;
+  filter: drop-shadow(0 0 10px purple);
+}
+
+.catalogo h2{
+  color: white;
+  position: absolute;
+  margin-left: -1010px;
+  margin-top: -30px;
+  font-size: 23px;
+
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+
+.card:hover{
+  background-color: #201f20;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+
+/*Catalogo 1 Pagode*/
+
+.catalogo1 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  margin-left: 188px;
+}
+
+.catalogo1 h2{
+  color: white;
+  position: absolute;
+  margin-left: -1010px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+
+/*Catalogo 2 mpb*/
+
+.catalogo2 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  margin-left: 188px;
+}
+
+.catalogo2 h2{
+  color: white;
+  position: absolute;
+  margin-left: -1010px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+
+/*Catalogo 3 funk*/
+
+.catalogo3 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  margin-left: 188px;
+}
+
+.catalogo3 h2{
+  color: white;
+  position: absolute;
+  margin-left: -1100px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+
+.content {
   margin-left: 220px;
   padding: 20px;
   color: white;
@@ -142,6 +582,10 @@ body{
   z-index: 999;
 }
 
-.content p{
-    color: #6e4588;
+.fim{
+  margin-top: 200px;
+}
+
+.content p {
+  color: #6e4588;
 }

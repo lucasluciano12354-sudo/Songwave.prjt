@@ -12,6 +12,7 @@
 
  <!--Barras de Navegação-->
 <body>
+
     <nav class="navbar">
         <div class="search">
              <input type="text" placeholder="O que você quer ouvir?">
@@ -20,23 +21,253 @@
 
     </nav>
 
- <button class="login-btn">Login</button>
+    <a href="login/login.html" class="login-btn">
+  Login
+   </a>
  
-  <!--Barra lateral-->
+  <!--Barra lateral(logo)-->
   <nav class="sidebar">
-    <h2><img width="24" height="24" src="https://img.icons8.com/plumpy/24/user-male-circle.png" alt="user-male-circle" />
-    </h2>
+  <a href="index.html"  class="logo">
+    <img src="img/logo.png" alt="SongWave" class="logo">
+  </a>
 
 
-    <a href="#">Início</a>
-    <a href="#">Perfil</a>
-    <a href="#">Músicas</a>
-    <a href="#">Configurações</a>
+    <a href="#inicio">Início</a>
+    <a href="#perfil">Perfil</a>
+    <a href="#músicas">Músicas</a>
+    <a href="#configurações">Configurações</a>
   </nav>
 
- 
+<!--Barra inferior(Play)-->
+ <footer class="player-bar">
 
-  <div class="content">
+  <div class="music-info">
+    <img id="cover" src="https://i.scdn.co/image/ab67616d0000b273cd945b4e3de57edd28481a3f">
+
+    <div>
+      <h4 id="title">Pipe Down</h4>
+      <p id="artist">Drake</p>
+    </div>
+  </div>
+
+  <div class="player-controls">
+    <button id="prev">⏮</button>
+
+    <button id="play" class="play-main">
+      ▶
+    </button>
+
+    <button id="next">⏭</button>
+  </div>
+
+  <div class="volume">
+    <img width="30" height="30" src="https://img.icons8.com/sf-black-filled/64/medium-volume.png" alt="medium-volume"/>
+   <input type="range" id="volume" min="0" max="100" value="50">
+  </div>
+
+</footer>
+
+<audio id="audio"></audio>
+
+
+<section class="banner">
+  <div class="overlay">
+    <div class="info">
+      <span class="tag">Donga</span>
+
+      <h1>"Pelo Telefone"</h1>
+
+      <p>
+        O Primeiro Samba Gravado.
+      </p>
+
+      <div class="buttons">
+        <button class="play-btn">▶ Play</button>
+        <a href="Donga.info/Donga-info.html" class="info-btn">
+          More Artist
+        </a>
+    </div>
+  </div>
+</section>
+
+<!--Catalogo de Musicas-->
+
+<section class="catalogo">
+  <h1>Descubra Faixas e Artistas</h1>
+    <h2>O Melhor do Pagode</h2>
+
+<div class="card">
+    <img src="./img/Arlindo Cruz O Bem.jfif" alt="O Bem">
+    <h3>O Bem</h3>
+    <p>Arlindo Cruz</p>
+</div>
+
+<div class="card">
+    <img src="./img/Agepê - GoMusic_mus.br.jfif" alt="Atalhos">
+     <h3>Atalhos</h3>
+    <p>Agepê</p>
+</div>
+
+<div class="card">
+    <img src="./img/Alcione.jfif" alt="Não Deixe o Samba Morrer">
+     <h3>Não Deixe o Samba Morrer</h3>
+    <p>Alcione</p>
+</div>
+
+<div class="card">
+    <img src="./img/Beth Carvalho.jfif" alt="Vou Festejar">
+     <h3>Vou Festejar</h3>
+    <p>Beth Carvalho</p>
+</div>
+
+<div class="card">
+    <img src="./img/Cartola - 1976.jfif" alt="As Rosas Não Falam">
+     <h3>As Rosas Não Falam</h3>
+    <p>Cartola</p>
+</div>
+
+<div class="card">
+    <img src="./img/Os originais do samba.jfif" alt="Falador Passa Mal">
+     <h3>Falador Passa Mal</h3>
+    <p>Os originais Do Samba</p>
+</div>
+
+</section>
+
+<!--Catalogo 1-->
+
+<section class="catalogo1">
+    <h2>O Melhor do Pagode</h2>
+
+<div class="card">
+    <img src="./img/Dilsinho.jfif" alt="Refém">
+    <h3>Refém</h3>
+    <p>Dilsinho</p>
+</div>
+
+<div class="card">
+    <img src="./img/exalta samba Separação - Extra _ Ao Vivo Na Ilha Da Magia,Brasil_2008.jfif" alt="Separação">
+     <h3>Separação - Extra/Ao Vivo...</h3>
+    <p>Exaltasamba</p>
+</div>
+
+<div class="card">
+    <img src="./img/Mumuzinho.jfif" alt="Calma">
+     <h3>Calma</h3>
+    <p>Mumuzinho</p>
+</div>
+
+<div class="card">
+    <img src="./img/Thiaguinho.jfif" alt="Caraca, Muleke!">
+     <h3>Caraca, Muleke!</h3>
+    <p>Thiaguinho</p>
+</div>
+
+<div class="card">
+    <img src="./img/reinventar.jfif" alt="Reinventar">
+     <h3>Reinventar</h3>
+    <p>Belo</p>
+</div>
+
+<div class="card">
+    <img src="./img/Menos É Mais.jfif" alt="Melhor Eu Ir">
+     <h3>Pot-Pourri: Melhor Eu Ir/Ligando os...</h3>
+    <p>Grupo Menos É Mais</p>
+</div>
+</section>
+
+
+<!--Catalogo 2-->
+
+<section class="catalogo2">
+    <h2>O puro suco do mpb</h2>
+
+<div class="card">
+    <img src="./img/Cartola - 1976.jfif" alt="Trem Das Onze">
+    <h3>Trem Das Onze</h3>
+    <p>Cartola</p>
+</div>
+
+<div class="card">
+    <img src="./img/João Gilberto - Amoroso (1977).jfif" alt="Besame Mucho">
+     <h3>Besame Mucho</h3>
+    <p>João Gilberto</p>
+</div>
+
+<div class="card">
+    <img src="./img/Rita Lee - Rita Lee.jfif" alt="Mania De você">
+     <h3>Mania De você</h3>
+    <p>Rita Lee</p>
+</div>
+
+<div class="card">
+    <img src="./img/primeiro álbum do Chico Buarque.jfif" alt="A Banda">
+     <h3>A Banda</h3>
+    <p>Chico Buarque</p>
+</div>
+
+<div class="card">
+    <img src="./img/Djavan _ Disco _Luz_ , 1982__.jfif" alt="Samurai">
+     <h3>Samurai</h3>
+    <p>Djavan</p>
+</div>
+
+<div class="card">
+    <img src="./img/Melhor Lugar.jfif" alt="Melhor Lugar">
+     <h3>Melhor Lugar</h3>
+    <p>Jorge Vercillo</p>
+</div>
+
+</section>
+
+<!--Catalogo 3-->
+
+<section class="catalogo3">
+    <h2>Funk Brasil</h2>
+
+<div class="card">
+    <img src="./img/Diário de um Cafajeste.jfif" alt="Diário de um Cafajeste">
+    <h3>Diário de um Cafajeste</h3>
+    <p>Dj Oreia, MC Ryan SP, Mc Lele JP, MC Meno K, Mc N...</p>
+</div>
+
+<div class="card">
+    <img src="./img/Carnivoro lele jp.jfif" alt="Carnivoro">
+     <h3>Carnivoro</h3>
+    <p>Mc Jacaré, Mc Lele JP, Mc Negão Original, D...</p>
+</div>
+
+<div class="card">
+    <img src="./img/Chatão lele jp.jfif" alt="Chatão">
+     <h3>Chatão</h3>
+    <p>Mc Lele JP, Dj Oreia, Mc DR, Dj Gubeatz, Mc Ryan SP, M...</p>
+</div>
+
+<div class="card">
+    <img src="./img/mixtape big G.jfif" alt="ME POSTOU NO DAILY">
+     <h3>ME POSTOU NO DAILY</h3>
+    <p>MC GP, Mc Lele JP, DJ DAVI DOGDOG, Dj Andrabeat</p>
+</div>
+
+<div class="card">
+    <img src="./img/ig 911.jfif" alt="Vou Tomar Uma">
+     <h3>Vou Tomar Uma</h3>
+    <p>Mc IG, Mc Ryan SP, Mc Lele JP, MC GP, Dj Oreia, Dj Vic...</p>
+</div>
+
+<div class="card">
+    <img src="./img/Todo Mundo Odeia o Ig.jfif" alt="GoodNight Menina 3">
+     <h3>GoodNight Menina 3</h3>
+    <p>Mc IG, Dj Glenner</p>
+</div>
+
+</section>
+
+<div class="fim">
+  <h3>010101010</h3>
+</div>
+ 
+   <div class="content">
     <h1>Songwave</h1>
     <p>You make your own wave.</p>
   </div>
