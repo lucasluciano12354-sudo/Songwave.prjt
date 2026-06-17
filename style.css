@@ -240,116 +240,120 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
 }
 
 /*Banner principal*/
+
 .banner{
-    width: 1300px;
-    height: 600px;
-    background-image:
-    linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.2)),
-    url(./img/donga_rep_portal-vermelho-min.jfif);
-    background-size: cover;
-    background-position: 80% -14%;
-    border-radius: 50px;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    margin-left: 203px;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    padding-left: 60px;
-}
-
-.banner::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  margin-top: 500px;
-  width: 100%;
-  height: 150px;
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      #0f0f0f
-  );
-
-}
-
-/*Escrita (Banner)*/
-.overlay{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: -20px;
-}
-
-.info{
-    max-width: 500px;
-    color: white;
-    margin-left: -20px;
-    margin-top: 50px;
-}
-
-.tag{
-    background: rgba(255,255,255,0.1);
-    padding: 8px 14px;
+    position:relative;
+    width:1250px;
+    height:88vh;
+    overflow:hidden;
     border-radius: 30px;
-    font-size: 12px;
-    letter-spacing: 2px;
-}
-
-.info h1{
-    font-size: 50px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-left: 238px;
     
 }
 
-.info p{
-    color: #cfcfcf;
-    line-height: 1.6;
-    margin-bottom: 25px;
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:opacity .8s ease;
+    background-size:cover;
+    background-position:center;
 }
 
-/*Botões Banner*/
-.buttons{
-    display: flex;
-    gap: 15px;
+.slide.active{
+    opacity:1;
 }
 
-.play-btn{
-    background: white;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: bold;
-    cursor: pointer;
+.slide:nth-child(1){
+    background-image:url("img/djavan\ -\ lilás.jfif");
 }
 
-.play-btn:hover{
-    background-color: #a855f7;
-    box-shadow: 0 0 25px #a855f7;
-    transform: scale(1.05);
+.slide:nth-child(2){
+    background-image:url("img/ICEMAN.jfif");
 }
 
-
-.info-btn{
-  text-decoration: none;
-    background: rgba(255,255,255,0.15);
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    cursor: pointer;
-    backdrop-filter: blur(5px);
+.slide:nth-child(3){
+    background-image:url("img/racionais\ bnn.jfif");
 }
 
-.info-btn:hover{
-    transform: scale(1.08);
-    box-shadow: 0 0 20px rgba(187, 66, 248, 0.599);
+.slide::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        #141414 0%,
+        rgba(20, 20, 20, 0.837) 15%,
+        rgba(20, 20, 20, 0.408) 35%,
+        transparent 60%
+    );
+
+    pointer-events:none;
 }
 
+/*Escrita Banner*/
+.content{
+    position:absolute;
+    left:80px;
+    top:50%;
+    transform:translateY(-50%);
+    color:white;
+    max-width:500px;
+}
+
+.content1 h1{
+  position: absolute;
+  margin-left: 490px;
+  margin-top: 300px;
+  font-size:5rem;
+  white-space: nowrap;
+  color: #ffffffa7;
+}
+
+.content2 h1{
+  position: absolute;
+  margin-left: 490px;
+  margin-top: 300px;
+  font-size:5rem;
+  white-space: nowrap;
+  color: #ffffffa7;
+}
+
+.content3 h1{
+  position: absolute;
+  margin-left: 360px;
+  margin-top: 300px;
+  font-size:5rem;
+  white-space: nowrap;
+  color: #ffffffa7;
+}
+
+/*Bolinhas(banner)*/
+
+.indicadores{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:20px;
+    margin-left: 120px;
+}
+
+.dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#777;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.dot.active{
+    background:white;
+    transform:scale(1.3);
+}
 
 
 /*Catalogo 1 pagode*/
@@ -573,7 +577,7 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
     font-size: smaller;
 }
 
-.content {
+.name-logo {
   margin-left: 220px;
   padding: 20px;
   color: white;
@@ -586,6 +590,6 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
   margin-top: 200px;
 }
 
-.content p {
+.name-logo p {
   color: #6e4588;
 }
