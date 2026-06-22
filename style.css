@@ -244,7 +244,7 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
 .banner{
     position:relative;
     width:1250px;
-    height:88vh;
+    height:80vh;
     overflow:hidden;
     border-radius: 30px;
     margin-left: 238px;

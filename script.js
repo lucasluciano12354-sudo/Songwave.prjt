@@ -54,3 +54,4 @@ dots.forEach((dot, index) => {
 mostrarSlide(0);
 
 setInterval(trocarBanner, 5000);
+

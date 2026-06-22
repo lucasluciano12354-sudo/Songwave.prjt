@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="IA.css">
+    <title>Gerador de Música IA</title>
+</head>
+<body>
+
+<section class="logo">
+    <img src="../img/logo.png" alt="SongWave">
+    <h1>SongWave</h1>
+    <p>You make your own wave.</p>
+</section>
+
+  <div class="music-generator">
+
+    <h1>Gerador de Música IA</h1>
+
+    <textarea
+        id="prompt"
+        placeholder="Descreva a música que deseja criar..."
+    ></textarea>
+
+    <button id="gerarBtn">
+        ✨ Gerar Música
+    </button>
+
+    <div id="status"></div>
+
+   <audio id="player"></audio>
+
+<div class="custom-player">
+
+    <button id="playBtn">
+        ▶
+    </button>
+
+    <input
+        type="range"
+        id="progress"
+        value="0"
+        min="0"
+        max="100"
+    >
+
+</div>
+
+<script src="IA.js"></script>
+</body>
+</html>
