@@ -55,3 +55,34 @@ mostrarSlide(0);
 
 setInterval(trocarBanner, 5000);
 
+
+// Espera a página carregar
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Mostra apenas a seção Explorar ao abrir o site
+    trocarSecao("explorar", document.querySelector(".abas button"));
+
+});
+
+function trocarSecao(secaoId, botao) {
+
+    // Esconde todas as seções
+    const secoes = document.querySelectorAll(".secao");
+
+    secoes.forEach(secao => {
+        secao.style.display = "none";
+    });
+
+    // Mostra a seção escolhida
+    document.getElementById(secaoId).style.display = "block";
+
+    // Remove o botão ativo
+    const botoes = document.querySelectorAll(".abas button");
+
+    botoes.forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    // Ativa o botão clicado
+    botao.classList.add("active");
+}

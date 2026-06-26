@@ -356,29 +356,284 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
 }
 
 
-/*Catalogo 1 pagode*/
+/* Abas */
+.abas {
+    position: absolute;
+    display: flex;
+    gap: 12px;
+    margin: 20px 40px;
+    margin-left: 236px;
+    margin-top: 700px;
+}
+
+.abas button {
+    background: #1e1e1e;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.abas button:hover {
+    background: #8b5cf6;
+    transform: scale(1.05);
+}
+
+.abas button.active {
+    background: #8b5cf6;
+}
+
+/* Seções */
+.secao {
+    display: none;
+}
+
+#explorar {
+    display: block;
+}
+
+
+
+/*Catalogo*/
 
 .catalogo{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 180px;
+  margin-top: 70px;
   margin-left: 188px;
-}
-
-.catalogo h1{
-  color: rgba(255, 255, 255, 0.863);
-  position: absolute;
-  margin-left: -50px;
-  margin-top: -120px;
-  padding: 12px 25px;
-  background:#0000006f;
+  background-color:#141414;
+  padding: 130px 10px;
   border-radius: 30px;
-  filter: drop-shadow(0 0 10px purple);
+
 }
 
 .catalogo h2{
+  color: white;
+  position: absolute;
+  margin-left: -1000px;
+  margin-top: -30px;
+  font-size: 23px;
+
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+
+.card:hover{
+  background-color: #201f20;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+
+/*Catalogo 1 samba*/
+
+.catalogo1 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: -66px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 10px 10px;
+}
+
+.catalogo1 h2{
+  color: white;
+  position: absolute;
+  margin-left: -1000px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+
+/*Catalogo 2 mpb*/
+
+.catalogo2 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: -20px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 80px 10px;
+}
+
+.catalogo2 h2{
+  color: white;
+  position: absolute;
+  margin-left: -1000px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+
+/*Catalogo 3 funk*/
+
+.catalogo3 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: -60px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 50px 10px;
+  border-radius: 30px;
+}
+
+.catalogo3 h2{
+  color: white;
+  position: absolute;
+  margin-left: -1100px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+
+/*Catalogo aba internacional*/
+.catalogo-int{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 70px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 130px 10px;
+  border-radius: 30px;
+
+}
+
+.catalogo-int h2{
   color: white;
   position: absolute;
   margin-left: -1010px;
@@ -424,21 +679,23 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
     font-size: smaller;
 }
 
-/*Catalogo 1 Pagode*/
+/*Catalogo 1 samba*/
 
-.catalogo1 {
+.catalogo-int1 {
   display: flex;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: 80px;
+  margin-top: -66px;
   margin-left: 188px;
+  background-color:#141414;
+  padding: 10px 10px;
 }
 
-.catalogo1 h2{
+.catalogo-int1 h2{
   color: white;
   position: absolute;
-  margin-left: -1010px;
+  margin-left: -1150px;
   margin-top: -30px;
   font-size: 23px;
 }
@@ -477,67 +734,18 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
 
 /*Catalogo 2 mpb*/
 
-.catalogo2 {
+.catalogo-int2 {
   display: flex;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: 80px;
+  margin-top: -20px;
   margin-left: 188px;
+  background-color:#141414;
+  padding: 80px 10px;
 }
 
-.catalogo2 h2{
-  color: white;
-  position: absolute;
-  margin-left: -1010px;
-  margin-top: -30px;
-  font-size: 23px;
-}
-
-.card{
-  width: 200px;
-  border-radius: 12px;
-  padding: 15px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.card img{
-    width: 100%;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.card img:hover {
-  opacity: 0.7;
-
-}
-
-.card h3{
-    color: white;
-    margin-top: 10px;
-    font-size: 20px;
-    font-size:small
-}
-
-.card p{
-    color: #b3b3b3;
-    font-size: 14px;
-    font-size: smaller;
-}
-
-/*Catalogo 3 funk*/
-
-.catalogo3 {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 80px;
-  margin-left: 188px;
-}
-
-.catalogo3 h2{
+.catalogo-int2 h2{
   color: white;
   position: absolute;
   margin-left: -1100px;
@@ -576,6 +784,62 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
     font-size: 14px;
     font-size: smaller;
 }
+
+/*Catalogo 3 funk*/
+
+.catalogo-int3 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: -60px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 50px 10px;
+  border-radius: 30px;
+}
+
+.catalogo-int3 h2{
+  color: white;
+  position: absolute;
+  margin-left: -1070px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+
+
 
 .name-logo {
   margin-left: 220px;
