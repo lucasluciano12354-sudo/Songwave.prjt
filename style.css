@@ -243,11 +243,12 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
 
 .banner{
     position:relative;
-    width:1250px;
+    width:1290px;
     height:80vh;
     overflow:hidden;
     border-radius: 30px;
-    margin-left: 238px;
+    margin-left: 216px;
+    margin-top: 36px;
     
 }
 
@@ -363,7 +364,7 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
     gap: 12px;
     margin: 20px 40px;
     margin-left: 236px;
-    margin-top: 700px;
+    margin-top: 750px;
 }
 
 .abas button {
