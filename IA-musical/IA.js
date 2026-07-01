@@ -13,43 +13,45 @@ btn.addEventListener("click", () => {
         .toLowerCase();
 
     let musica =
-        "Musicas.IA/Lofi.mp3";
+        "../Musicas.IA/Lofi.mp3";
 
     if (
         prompt.includes("triste")
     ) {
         musica =
-        "Musicas.IA/Triste.mp3";
+        "../Musicas.IA/Triste.mp3";
     }
 
     else if (
         prompt.includes("trap")
     ) {
         musica =
-        "Musicas.IA/Trap.mp3";
+        "../Musicas.IA/Trap.mp3";
     }
 
      else if (
         prompt.includes("r&b")
     ) {
         musica =
-        "Musicas.IA/R&b.mp3";
+        "../Musicas.IA/R&b.mp3";
     }
 
     else if (
         prompt.includes("romantica") ||
-        prompt.includes("amor")
+        prompt.includes("amor") ||
+        prompt.includes("Romantico")
     ) {
         musica =
-        "Musicas.IA/Romantica.mp3";
+        "../Musicas.IA/Romantica.mp3";
     }
 
     else if (
         prompt.includes("lofi") ||
-        prompt.includes("estudar")
+        prompt.includes("estudar") ||
+        prompt.includes("estudos")
     ) {
         musica =
-        "Musicas.IA/Lofi.mp3";
+        "../Musicas.IA/Lofi.mp3";
     }
 
  

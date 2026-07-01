@@ -20,33 +20,32 @@ body{
 /*Logo*/
 
 .logo img{
-  position: relative;
+  position: fixed;
   display: flex;
   width: 115px;
   height: 115px;
-  margin-left: -255px;
-  margin-top: -370px;
+  margin-left: -280px;
+  margin-top: -5px;
   top: -0.4rem;
   filter: drop-shadow(0 0 10px purple);
+  z-index: 999;
 }
 
-.logo h1{
-  position: relative;
-  margin-left: -180px;
-  margin-top: -105px;
-  font-size: 2rem;
+.name-logo {
+  margin-top: -405px;
+  margin-left: -760px;
   padding: 20px;
   color: white;
   padding-top: 0.5rem;
+  position: fixed;
+  z-index: 999;
+  font-size: 0.9rem;
 }
 
-.logo p{
-    margin-left: -150px;
-    margin-top: -18px;
-    font-size: 1rem;
-    color:#6e4588;
-
+.name-logo p {
+  color: #6e4588;
 }
+
 
 /*Banner IA-music*/
 
@@ -70,7 +69,9 @@ box-shadow:
 
 .music-generator h1{
     color: white;
-    margin-bottom:20px;
+    margin-bottom: 15px;
+    margin-left: 600px;
+    margin-top: 10px;
 }
 
 .music-generator textarea{
