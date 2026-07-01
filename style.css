@@ -123,7 +123,7 @@ body {
   transition: 0.3s;
   position: fixed;
   right: 20px;
-  margin-top: 17px;
+  margin-top: 70px;
   z-index: 100;
 }
 
@@ -132,112 +132,53 @@ body {
   transform: scale(1.05);
 }
 
-/*Barra inferior (Play) precisa ser arrumada*/ 
-.player-bar {
-  position: fixed;
-  z-index: 10;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: #121212;
-  border-top: 1px solid #2a2a2a;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  box-sizing: border-box;
+#areaUsuario{
+    display:flex;
+    align-items:center;
 }
 
-.music-info {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+#btnLogin{
+    padding:10px 22px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    background:#8A2BE2;
+    transition:.3s;
 }
 
-.music-info img {
-  width: 55px;
-  height: 55px;
-  border-radius: 8px;
+#btnLogin:hover{
+    background:#a84dff;
+    box-shadow:0 0 15px #8A2BE2;
 }
 
-.music-info h4 {
-  color: white;
-  margin: 0;
+#perfil{
+    display:none;
+    position:fixed;
+    top:13px;
+    right:20px;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    overflow:hidden;
+    border:2px solid #8A2BE2;
+    cursor:pointer;
+    z-index:1000;
 }
 
-.music-info p {
-  color: #b3b3b3;
-  margin: 0;
-  font-size: 14px;
+#perfil img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.player-controls {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+#perfil:hover{
+
+    transform:scale(1.1);
+
+    box-shadow:0 0 20px #8A2BE2;
+
 }
 
-.player-controls button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.play-main {
-  width: 45px;
-  height: 45px;
-  border-radius: 10%;
-  background: #a855f7 !important;
-}
-
-.volume img {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 28px;
-  right: 145px;
-}
-
-/*Volume (Arrumar)*/
-input[type="range"] {
-  -webkitappearance: none;
-
-  width: 120px;
-  height: 4px;
-  background: #535353;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-input[type="range"]::-webkit-slider-runnable-track {
-  height: 4px;
-  background: #535353;
-  border-radius: 10px;
-}
-
-/* Bolinha */
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: white;
-  margin-top: -4px;
-  opacity: 0;
-  transition: 0.2s;
-}
-
-input[type="range"]:hover::-webkit-slider-thumb {
-  opacity: 1;
-}
-
-input[type="range"]:hover::-webkit-slider-runnable-track {
-  background: #08f757;
-}
 
 /*Banner principal*/
 
@@ -397,7 +338,315 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
     display: block;
 }
 
+/*Catalogo explorar*/
 
+.catalogo-exp {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 130px 10px;
+  border-radius: 30px;
+}
+
+.catalogo-exp h2{
+  color: white;
+  position: absolute;
+  margin-left: -1100px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+/*samba*/
+.catalogo-exp1 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: -66px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 10px 10px;
+}
+
+.catalogo-exp1 h2{
+  color: white;
+  position: absolute;
+  margin-left: -1027px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+/*R&b*/
+.catalogo-exp2 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: -5px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 50px 10px;
+}
+
+.catalogo-exp2 h2{
+  color: white;
+  position: absolute;
+  margin-left: -1160px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+/*mpb*/
+.catalogo-exp3 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: -15px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 50px 10px;
+}
+
+.catalogo-exp3 h2{
+  color: white;
+  position: absolute;
+  margin-left: -1000px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+/*Vibe da semana*/
+.catalogo-exp4 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: -50px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 80px 10px;
+}
+
+.catalogo-exp4 h2{
+  color: white;
+  position: absolute;
+  margin-left: -1050px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+/*funk*/
+.catalogo-exp5 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: -50px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 50px 10px;
+  border-radius: 30px;
+}
+
+.catalogo-exp5 h2{
+  color: white;
+  position: absolute;
+  margin-left: -1100px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
 
 /*Catalogo*/
 
@@ -411,6 +660,7 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
   background-color:#141414;
   padding: 130px 10px;
   border-radius: 30px;
+
 
 }
 
@@ -460,6 +710,8 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
     font-size: smaller;
 }
 
+
+
 /*Catalogo 1 samba*/
 
 .catalogo1 {
@@ -476,7 +728,7 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
 .catalogo1 h2{
   color: white;
   position: absolute;
-  margin-left: -1000px;
+  margin-left: -1136px;
   margin-top: -30px;
   font-size: 23px;
 }
@@ -573,7 +825,7 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: -60px;
+  margin-top: -36px;
   margin-left: 188px;
   background-color:#141414;
   padding: 50px 10px;
@@ -680,14 +932,14 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
     font-size: smaller;
 }
 
-/*Catalogo 1 samba*/
+/*Catalogo 1 R&b*/
 
 .catalogo-int1 {
   display: flex;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: -66px;
+  margin-top: -100px;
   margin-left: 188px;
   background-color:#141414;
   padding: 10px 10px;
@@ -733,7 +985,7 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
     font-size: smaller;
 }
 
-/*Catalogo 2 mpb*/
+/*Catalogo 2 rap*/
 
 .catalogo-int2 {
   display: flex;
@@ -786,7 +1038,7 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
     font-size: smaller;
 }
 
-/*Catalogo 3 funk*/
+/*Catalogo 3 desc*/
 
 .catalogo-int3 {
   display: flex;
@@ -840,6 +1092,239 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
     font-size: smaller;
 }
 
+/*Aba R&b*/
+.catalogo-rnb {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 130px 10px;
+  border-radius: 30px;
+}
+
+.catalogo-rnb h2{
+  color: white;
+  position: absolute;
+  margin-left: -1150px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+
+/*Aba Rap2000s*/
+.catalogo-rap {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 130px 10px;
+  border-radius: 30px;
+}
+
+.catalogo-rap h2{
+  color: white;
+  position: absolute;
+  margin-left: -1100px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+
+/*Aba Pagode*/
+.catalogo-pag {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 130px 10px;
+  border-radius: 30px;
+}
+
+.catalogo-pag h2{
+  color: white;
+  position: absolute;
+  margin-left: -1130px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+
+/*Aba Funk*/
+.catalogo-fnk {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  margin-left: 188px;
+  background-color:#141414;
+  padding: 130px 10px;
+  border-radius: 30px;
+}
+
+.catalogo-fnk h2{
+  color: white;
+  position: absolute;
+  margin-left: -1100px;
+  margin-top: -30px;
+  font-size: 23px;
+}
+
+.card{
+  width: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+
+}
+
+.card h3{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    font-size:small
+}
+
+.card p{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-size: smaller;
+}
+
+/*player*/
+.player{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.player iframe{
+    width: 2000px;
+    max-width: 9000px;
+    height: 150px;
+    border: none;
+    border-radius: 12px;
+    margin-top: 5px;
+}
 
 
 .name-logo {
@@ -849,10 +1334,6 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
   padding-top: 0.5rem;
   position: fixed;
   z-index: 999;
-}
-
-.fim{
-  margin-top: 200px;
 }
 
 .name-logo p {

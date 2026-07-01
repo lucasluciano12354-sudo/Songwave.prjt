@@ -86,3 +86,26 @@ function trocarSecao(secaoId, botao) {
     // Ativa o botão clicado
     botao.classList.add("active");
 }
+
+
+const cards = document.querySelectorAll(".card");
+
+const player = document.getElementById("spotifyPlayer");
+
+cards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        const id = card.dataset.spotify;
+
+        player.src =
+        `https://open.spotify.com/embed/track/${id}`;
+
+    });
+
+});
+
+function sair() {
+    localStorage.removeItem("logado");
+    window.location.reload();
+}
